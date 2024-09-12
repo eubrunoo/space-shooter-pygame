@@ -1,6 +1,6 @@
 import pygame 
 from os.path import join
-from menu import menu
+from menu import menu, ending
 
 from random import randint, uniform
 
@@ -68,7 +68,7 @@ class Meteor(pygame.sprite.Sprite):
         self.start_time = pygame.time.get_ticks()
         self.lifetime = 3000
         self.direction = pygame.Vector2(uniform(-0.5, 0.5),1)
-        self.speed = randint(300,500)
+        self.speed = randint(300,600)
         self.rotation_speed = randint(40,80)
         self.rotation = 0
     
@@ -172,4 +172,5 @@ while running:
 
     pygame.display.update()
 
+ending()
 pygame.quit()

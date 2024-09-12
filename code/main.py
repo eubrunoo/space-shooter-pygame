@@ -1,5 +1,6 @@
 import pygame 
 from os.path import join
+from menu import menu
 
 from random import randint, uniform
 
@@ -118,6 +119,7 @@ def display_score():
 # general setup 
 pygame.init()
 WINDOW_WIDTH, WINDOW_HEIGHT = 1280, 720
+menu()
 display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 pygame.display.set_caption('Space shooter')
 running = True
